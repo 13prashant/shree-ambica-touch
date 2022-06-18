@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Tangerine&display=swap");
+
+/* ==================== Variables ==================== */
+:root {
+  --color-dark-primary: #212121;
+  --color-dark-secondary: #242424;
+  --color-accent-primary: #b88746;
+  --color-accent-secondary: #d7b369;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #7d7d7d;
+  --transition: 200ms;
+}
+
+/* ==================== Reset Styles ==================== */
+body,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-dark-primary);
+  color: var(--color-text-primary);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  transition: all ease-in-out var(--transition);
+}
+
+p {
+  color: var(--color-text-secondary);
+  margin-bottom: 3.125rem;
+}
+
+/* ==================== Util Classes ==================== */
+.mb1 {
+  margin-bottom: 1rem;
+}
+
+/* ==================== Global Styles ==================== */
+.s1 {
+  background: var(--color-dark-primary);
+}
+
+.s2 {
+  background: var(--color-dark-secondary);
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 6.25rem 0;
+}
+
+.wrapper {
+  padding: 0 2rem;
+}
+
+.hero__intro h3 {
+  margin-bottom: 1rem;
+}
+
+.divider {
+  border-top: 1px solid var(--color-accent-secondary);
+  opacity: 0.4;
+  width: 30%;
+  margin: 1rem auto 2rem;
+}
+
+.wrapper {
+  align-items: center;
+  text-align: center;
+}
+
+.wrapper h3 {
+  font-family: "Tangerine", cursive;
+  font-weight: lighter;
+  font-size: 3rem;
+  color: var(--color-accent-primary);
+}
+
+.wrapper h5 {
+  color: var(--color-accent-secondary);
+  opacity: 0.4;
+}
+
+.wrapper p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== Header ==================== */
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-bottom: 1px solid var(--color-accent-primary);
+  background-color: var(--color-dark-primary);
+}
+
+header .container {
+  padding: 0;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-family: "Tangerine", cursive;
+  font-weight: lighter;
+  font-size: 2rem;
+  color: var(--color-accent-secondary);
+}
+
+/* ==================== Hero ==================== */
+#hero .container {
+  padding-top: calc(5rem + 6.25rem);
+}
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.hero__right {
+}
+
+.hero__right h3 {
+}
+
+.hero__image {
+  width: 50%;
+  border: 1px solid var(--color-text-secondary);
+  padding: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* ==================== Media Queries ==================== */
+@media screen and (min-width: 540px) {
+  body {
+    font-size: 18px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6.25rem 3.125rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .hero__wrapper {
+    flex-direction: row;
+    text-align: left;
+  }
+  .hero__left {
+    flex: 1;
+  }
+  .hero__right {
+    flex: 1;
+  }
+  .hero__wrapper .divider {
+    width: unset;
+  }
+}
